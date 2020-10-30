@@ -10,1023 +10,1025 @@
       "ASC": "true"
     },
     "parameters": {
-      "IncludeArcMachines": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Include Arc connected servers for Guest Configuration policies",
-          "description": "Optionally choose to audit settings inside Arc connected servers using Guest Configuration policies. By selecting this option, you agree to be charged monthly per Arc connected machine."
+        "IncludeArcMachines": {
+          "type": "String",
+          "allowedValues": [
+            "true",
+            "false"
+          ],
+          "defaultValue": "false",
+          "metadata": {
+            "displayName": "[Preview]: Include Arc connected servers for Guest Configuration policies",
+            "description": "Optionally choose to audit settings inside Arc connected servers using Guest Configuration policies. By selecting this option, you agree to be charged monthly per Arc connected machine."
+          }
         },
-        "allowedValues": [
-          "true",
-          "false"
-        ],
-        "defaultValue": "false"
-      },
-      "membersToExcludeInLocalAdministratorsGroup": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: List of users excluded from Windows VM Administrators group",
-          "description": "A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+        "membersToExcludeInLocalAdministratorsGroup": {
+          "type": "String",
+          "metadata": {
+            "displayName": "[Preview]: List of users excluded from Windows VM Administrators group",
+            "description": "A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+          }
+        },
+        "membersToIncludeInLocalAdministratorsGroup": {
+          "type": "String",
+          "metadata": {
+            "displayName": "[Preview]: List of users that must be included in Windows VM Administrators group",
+            "description": "A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+          }
+        },
+        "listOfLocationsForNetworkWatcher": {
+          "type": "Array",
+          "metadata": {
+            "displayName": "[Preview]: List of regions where Network Watcher should be enabled",
+            "description": "Audit if Network Watcher is not enabled for region(s).",
+            "strongType": "location"
+          }
+        },
+        "logAnalyticsWorkspaceIDForVMAgents": {
+          "type": "String",
+          "metadata": {
+            "displayName": "[Preview]: Log Analytics workspace ID for VM agent reporting",
+            "description": "ID (GUID) of the Log Analytics workspace where VMs agents should report."
+          }
+        },
+        "pHPLatestVersionForAppServices": {
+          "type": "String",
+          "defaultValue": "7.3",
+          "metadata": {
+            "displayName": "[Preview]: Latest PHP version",
+            "description": "Latest supported PHP version for App Services"
+          }
+        },
+        "windowsImagesToAddToLogAgentAuditScope": {
+          "type": "Array",
+          "defaultValue": [],
+          "metadata": {
+            "displayName": "[Preview]: Optional: List of Windows VM images that support Log Analytics agent to add to audit scope",
+            "description": "A semicolon-separated list of images; Ex: /subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage"
+          }
+        },
+        "linuxImagesToAddToLogAgentAuditScope": {
+          "type": "Array",
+          "defaultValue": [],
+          "metadata": {
+            "displayName": "[Preview]: Optional: List of Linux VM images that support Log Analytics agent to add to audit scope",
+            "description": "A semicolon-separated list of images; Ex: /subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage"
+          }
+        },
+        "javaLatestVersionForAppServices": {
+          "type": "String",
+          "defaultValue": "11",
+          "metadata": {
+            "displayName": "[Preview]: Latest Java version",
+            "description": "Latest supported Java version for App Services"
+          }
+        },
+        "windowsPythonLatestVersionForAppServices": {
+          "type": "String",
+          "defaultValue": "3.6",
+          "metadata": {
+            "displayName": "[Preview]: Latest Windows Python version",
+            "description": "Latest supported Python version for App Services"
+          }
+        },
+        "linuxPythonLatestVersionForAppServices": {
+          "type": "String",
+          "defaultValue": "3.8",
+          "metadata": {
+            "displayName": "[Preview]: Latest Linux Python version",
+            "description": "Latest supported Python version for App Services"
+          }
+        },
+        "listOfResourceTypesForDiagnosticLogs": {
+          "type": "Array",
+          "allowedValues": [
+            "Microsoft.AnalysisServices/servers",
+            "Microsoft.ApiManagement/service",
+            "Microsoft.Network/applicationGateways",
+            "Microsoft.Automation/automationAccounts",
+            "Microsoft.ContainerInstance/containerGroups",
+            "Microsoft.ContainerRegistry/registries",
+            "Microsoft.ContainerService/managedClusters",
+            "Microsoft.Batch/batchAccounts",
+            "Microsoft.Cdn/profiles/endpoints",
+            "Microsoft.CognitiveServices/accounts",
+            "Microsoft.DocumentDB/databaseAccounts",
+            "Microsoft.DataFactory/factories",
+            "Microsoft.DataLakeAnalytics/accounts",
+            "Microsoft.DataLakeStore/accounts",
+            "Microsoft.EventGrid/eventSubscriptions",
+            "Microsoft.EventGrid/topics",
+            "Microsoft.EventHub/namespaces",
+            "Microsoft.Network/expressRouteCircuits",
+            "Microsoft.Network/azureFirewalls",
+            "Microsoft.HDInsight/clusters",
+            "Microsoft.Devices/IotHubs",
+            "Microsoft.KeyVault/vaults",
+            "Microsoft.Network/loadBalancers",
+            "Microsoft.Logic/integrationAccounts",
+            "Microsoft.Logic/workflows",
+            "Microsoft.DBforMySQL/servers",
+            "Microsoft.Network/networkInterfaces",
+            "Microsoft.Network/networkSecurityGroups",
+            "Microsoft.DBforPostgreSQL/servers",
+            "Microsoft.PowerBIDedicated/capacities",
+            "Microsoft.Network/publicIPAddresses",
+            "Microsoft.RecoveryServices/vaults",
+            "Microsoft.Cache/redis",
+            "Microsoft.Relay/namespaces",
+            "Microsoft.Search/searchServices",
+            "Microsoft.ServiceBus/namespaces",
+            "Microsoft.SignalRService/SignalR",
+            "Microsoft.Sql/servers/databases",
+            "Microsoft.Sql/servers/elasticPools",
+            "Microsoft.StreamAnalytics/streamingjobs",
+            "Microsoft.TimeSeriesInsights/environments",
+            "Microsoft.Network/trafficManagerProfiles",
+            "Microsoft.Compute/virtualMachines",
+            "Microsoft.Compute/virtualMachineScaleSets",
+            "Microsoft.Network/virtualNetworks",
+            "Microsoft.Network/virtualNetworkGateways"
+          ],
+          "defaultValue": [
+            "Microsoft.AnalysisServices/servers",
+            "Microsoft.ApiManagement/service",
+            "Microsoft.Network/applicationGateways",
+            "Microsoft.Automation/automationAccounts",
+            "Microsoft.ContainerInstance/containerGroups",
+            "Microsoft.ContainerRegistry/registries",
+            "Microsoft.ContainerService/managedClusters",
+            "Microsoft.Batch/batchAccounts",
+            "Microsoft.Cdn/profiles/endpoints",
+            "Microsoft.CognitiveServices/accounts",
+            "Microsoft.DocumentDB/databaseAccounts",
+            "Microsoft.DataFactory/factories",
+            "Microsoft.DataLakeAnalytics/accounts",
+            "Microsoft.DataLakeStore/accounts",
+            "Microsoft.EventGrid/eventSubscriptions",
+            "Microsoft.EventGrid/topics",
+            "Microsoft.EventHub/namespaces",
+            "Microsoft.Network/expressRouteCircuits",
+            "Microsoft.Network/azureFirewalls",
+            "Microsoft.HDInsight/clusters",
+            "Microsoft.Devices/IotHubs",
+            "Microsoft.KeyVault/vaults",
+            "Microsoft.Network/loadBalancers",
+            "Microsoft.Logic/integrationAccounts",
+            "Microsoft.Logic/workflows",
+            "Microsoft.DBforMySQL/servers",
+            "Microsoft.Network/networkInterfaces",
+            "Microsoft.Network/networkSecurityGroups",
+            "Microsoft.DBforPostgreSQL/servers",
+            "Microsoft.PowerBIDedicated/capacities",
+            "Microsoft.Network/publicIPAddresses",
+            "Microsoft.RecoveryServices/vaults",
+            "Microsoft.Cache/redis",
+            "Microsoft.Relay/namespaces",
+            "Microsoft.Search/searchServices",
+            "Microsoft.ServiceBus/namespaces",
+            "Microsoft.SignalRService/SignalR",
+            "Microsoft.Sql/servers/databases",
+            "Microsoft.Sql/servers/elasticPools",
+            "Microsoft.StreamAnalytics/streamingjobs",
+            "Microsoft.TimeSeriesInsights/environments",
+            "Microsoft.Network/trafficManagerProfiles",
+            "Microsoft.Compute/virtualMachines",
+            "Microsoft.Compute/virtualMachineScaleSets",
+            "Microsoft.Network/virtualNetworks",
+            "Microsoft.Network/virtualNetworkGateways"
+          ],
+          "metadata": {
+            "displayName": "[Preview]: List of resource types that should have diagnostic logs enabled",
+            "description": "Audit diagnostic setting for selected resource types"
+          }
+        },
+        "minimumTLSVersionForWindowsServers": {
+          "type": "String",
+          "allowedValues": [
+            "1.2"
+          ],
+          "defaultValue": "1.2",
+          "metadata": {
+            "displayName": "[Preview]: Minimum TLS version for Windows web servers",
+            "description": "The minimum TLS protocol version that should be enabled on Windows web servers."
+          }
         }
       },
-      "membersToIncludeInLocalAdministratorsGroup": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: List of users that must be included in Windows VM Administrators group",
-          "description": "A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+      "policyDefinitions": [
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
+          "parameters": {},
+          "policyDefinitionReferenceId": "adaptiveNetworkHardeningRecommendationsShouldBeAppliedOnInternetFacingVirtualMachines",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.1.176"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/09024ccc-0c5f-475e-9457-b7c0d9ed487b",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityDesignateMoreThanOneOwnerMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.3.017"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
+          "parameters": {},
+          "policyDefinitionReferenceId": "diskEncryptionMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.3.191"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b15565f-aa9e-48ba-8619-45960f2c314d",
+          "parameters": {},
+          "policyDefinitionReferenceId": "emailNotificationToSubscriptionOwnerHighSeverityAlertsEnabled",
+          "groupNames": [
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e60b895-3786-45da-8377-9c6b4b6ac5f9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "functionAppDisableRemoteDebuggingMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69bf4abd-ca1e-4cf6-8b5a-762d42e61d4f",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            },
+            "MembersToExclude": {
+              "value": "[parameters('membersToExcludeInLocalAdministratorsGroup')]"
+            }
+          },
+          "policyDefinitionReferenceId": "AdministratorsGroupInsideWindowsVMsExcludesTheSpecifiedMembers",
+          "groupNames": [
+            "CMMC_L3_AC.3.017"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17k78e20-9358-41c9-923c-fb736d382a12",
+          "parameters": {},
+          "policyDefinitionReferenceId": "sqlDbEncryptionMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.3.191"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1bc1795e-d44a-4d48-9b3b-6fff0fd5f9ba",
+          "parameters": {
+            "PHPLatestVersion": {
+              "value": "[parameters('pHPLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "1bc1795ed44a4d489b3b6fff0fd5f9ba",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22bee202-a82f-4305-9a2a-6d7f44d4dedb",
+          "parameters": {},
+          "policyDefinitionReferenceId": "diagnosticsLogsInRedisCacheMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3cf2ab00-13f1-4d0c-8971-2ac904541a7e",
+          "parameters": {},
+          "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenNone",
+          "groupNames": [
+            "CMMC_L3_IA.1.077",
+            "CMMC_L3_IA.2.078",
+            "CMMC_L3_IA.2.079",
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013",
+            "CMMC_L3_IA.2.081"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/497dff13-db2a-4c0f-8603-28fa3b331ab6",
+          "parameters": {},
+          "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenUser",
+          "groupNames": [
+            "CMMC_L3_IA.1.077",
+            "CMMC_L3_IA.2.078",
+            "CMMC_L3_IA.2.079",
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013",
+            "CMMC_L3_IA.2.081"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/385f5831-96d4-41db-9a3c-cd3af78aaae6",
+          "parameters": {},
+          "policyDefinitionReferenceId": "Prerequisite_DeployExtensionWindows",
+          "groupNames": [
+            "CMMC_L3_IA.1.077",
+            "CMMC_L3_IA.2.078",
+            "CMMC_L3_IA.2.079",
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013",
+            "CMMC_L3_IA.2.081"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1221c620-d201-468c-81e7-2817e6107e84",
+          "parameters": {},
+          "policyDefinitionReferenceId": "Prerequisite_DeployExtensionLinux",
+          "groupNames": [
+            "CMMC_L3_IA.1.077",
+            "CMMC_L3_IA.2.078",
+            "CMMC_L3_IA.2.079",
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013",
+            "CMMC_L3_IA.2.081"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a2d0e922-65d0-40c4-8f87-ea6da2d307a2",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "AuditWindowsVMsThatDoNotRestrictTheMinimumPasswordLengthTo14Characters",
+          "groupNames": [
+            "CMMC_L3_IA.2.078"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
+          "parameters": {},
+          "policyDefinitionReferenceId": "vmssEndpointProtectionMonitoring",
+          "groupNames": [
+            "CMMC_L3_SI.1.211"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/32133ab0-ee4b-4b44-98d6-042180979d50",
+          "parameters": {
+            "listOfImageIdToInclude_windows": {
+              "value": "[parameters('windowsImagesToAddToLogAgentAuditScope')]"
+            },
+            "listOfImageIdToInclude_linux": {
+              "value": "[parameters('linuxImagesToAddToLogAgentAuditScope')]"
+            }
+          },
+          "policyDefinitionReferenceId": "logAnalyticsOSImageAudit",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6ec09a3-78bf-4f8f-99dc-6c77182d0f99",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditLinuxVmAccountsWithNoPasswords",
+          "groupNames": [
+            "CMMC_L3_IA.1.077",
+            "CMMC_L3_IA.2.078"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/34c877ad-507e-4c82-993e-3452a6e0ad3c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "disableUnrestrictedNetworkToStorageAccountMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013",
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.1.176"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
+          "parameters": {},
+          "policyDefinitionReferenceId": "vmssOsVulnerabilitiesMonitoring",
+          "groupNames": [
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "secureTransferToStorageAccountMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
+          "parameters": {},
+          "policyDefinitionReferenceId": "adaptiveApplicationControlsMonitoring",
+          "groupNames": [
+            "CMMC_L3_CM.3.068",
+            "CMMC_L3_CM.3.069",
+            "CMMC_L3_CM.2.063"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
+          "parameters": {
+            "JavaLatestVersion": {
+              "value": "[parameters('javaLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "496223c3ad654ecd878abae78737e9ed",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f11b553-d42e-4e3a-89be-32ca364cad4c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityDesignateLessThanOwnersMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.3.017"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7",
+          "parameters": {},
+          "policyDefinitionReferenceId": "securityContactEmailAddressForSubscription",
+          "groupNames": [
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5744710e-cc2f-4ee8-8809-3b11e89f4bc9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "webAppRestrictCORSAccessMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.2.016"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138",
+          "parameters": {
+            "listOfImageIdToInclude_windows": {
+              "value": "[parameters('windowsImagesToAddToLogAgentAuditScope')]"
+            },
+            "listOfImageIdToInclude_linux": {
+              "value": "[parameters('linuxImagesToAddToLogAgentAuditScope')]"
+            }
+          },
+          "policyDefinitionReferenceId": "logAnalyticsOSImageVMSSAudit",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityRemoveExternalAccountWithReadPermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
+          "parameters": {},
+          "policyDefinitionReferenceId": "functionAppEnforceHttpsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
+          "parameters": {
+            "WindowsPythonLatestVersion": {
+              "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
+            },
+            "LinuxPythonLatestVersion": {
+              "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "7008174afd104ef0817efc820a951d73",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
+          "parameters": {
+            "WindowsPythonLatestVersion": {
+              "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
+            },
+            "LinuxPythonLatestVersion": {
+              "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "7238174afd104ef0817efc820a951d73",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
+          "parameters": {
+            "PHPLatestVersion": {
+              "value": "[parameters('pHPLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "7261b8988a844db89e0418527132abb3",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5b054a0d-39e2-4d53-bea3-9734cad2c69b",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditWindowsVmShouldNotAllowPrevious24Passwords",
+          "groupNames": [
+            "CMMC_L3_IA.2.079"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c3584d-afae-46f7-a20a-6f8adba71a16",
+          "parameters": {
+            "WindowsPythonLatestVersion": {
+              "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
+            },
+            "LinuxPythonLatestVersion": {
+              "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "74c3584dafae46f7a20a6f8adba71a16",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "vulnerabilityAssessmentMonitoring",
+          "groupNames": [
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bf16e0bb-31e1-4646-8202-60a235cc7e74",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditWindowsVmEnforcesPasswordComplexityRequirements",
+          "groupNames": [
+            "CMMC_L3_IA.2.078"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7f89b1eb-583c-429a-8828-af049802c1d9",
+          "parameters": {
+            "listOfResourceTypes": {
+              "value": "[parameters('listOfResourceTypesForDiagnosticLogs')]"
+            }
+          },
+          "policyDefinitionReferenceId": "7f89b1eb583c429a8828af049802c1d9",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041",
+            "CMMC_L3_AU.3.046"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
+          "parameters": {},
+          "policyDefinitionReferenceId": "systemUpdatesMonitoring",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/88999f4c-376a-45c8-bcb3-4058f713cf39",
+          "parameters": {
+            "JavaLatestVersion": {
+              "value": "[parameters('javaLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "88999f4c376a45c8bcb34058f713cf39",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8c122334-9d20-4eb8-89ea-ac9a705b74ae",
+          "parameters": {},
+          "policyDefinitionReferenceId": "ensureHTTPVersionLatestForWebApp",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8cb6aa8b-9e41-4f4e-aa25-089a7ac2581e",
+          "parameters": {},
+          "policyDefinitionReferenceId": "apiAppRequireLatestTlsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/da0f98fe-a24b-4ad5-af69-bd0400233661",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "AuditWindowsVMsThatDoNotStorePasswordsUsingReversibleEncryption",
+          "groupNames": [
+            "CMMC_L3_IA.1.076"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_IA.1.076",
+            "CMMC_L3_IA.3.083"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/30f71ea1-ac77-4f26-9fc5-2d926bbd4ba7",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            },
+            "MembersToInclude": {
+              "value": "[parameters('membersToIncludeInLocalAdministratorsGroup')]"
+            }
+          },
+          "policyDefinitionReferenceId": "AdministratorsGroupInsideWindowsVMsIncludesTheSpecifiedMembers",
+          "groupNames": [
+            "CMMC_L3_AC.3.017"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/991310cd-e9f3-47bc-b7b6-f57b557d07db",
+          "parameters": {},
+          "policyDefinitionReferenceId": "ensureHTTPVersionLatestForAPIApp",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9b597639-28e4-48eb-b506-56b05d366257",
+          "parameters": {},
+          "policyDefinitionReferenceId": "anitmalwareRequiredForWindowsServers",
+          "groupNames": [
+            "CMMC_L3_SI.1.211"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
+          "parameters": {
+            "JavaLatestVersion": {
+              "value": "[parameters('javaLatestVersionForAppServices')]"
+            }
+          },
+          "policyDefinitionReferenceId": "9d0b6ea493e24578bf2f6bb17d22b4bc",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6",
+          "parameters": {},
+          "policyDefinitionReferenceId": "nextGenerationFirewallMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.1.176"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
+          "parameters": {},
+          "policyDefinitionReferenceId": "webAppEnforceHttpsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "sqlServerAuditingMonitoring",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041",
+            "CMMC_L3_AU.3.046"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a70ca396-0a34-413a-88e1-b956c1e683be",
+          "parameters": {},
+          "policyDefinitionReferenceId": "theLogAnalyticsAgentShouldBeInstalledOnVirtualMachines",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_IA.1.076",
+            "CMMC_L3_IA.3.083"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb4388-5bf4-4ad7-ba82-2cd2f41ceae9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "advancedDataSecurityShouldBeEnabledOnYourSQLServers",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041",
+            "CMMC_L3_AU.3.046",
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SC.3.191",
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "advancedDataSecurityShouldBeEnabledOnYourSQLManagedInstances",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041",
+            "CMMC_L3_AU.3.046",
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SC.3.191",
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "endpointProtectionMonitoring",
+          "groupNames": [
+            "CMMC_L3_SI.1.211"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5752e6d6-1206-46d8-8ab1-ecc2f71a8112",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            },
+            "MinimumTLSVersion": {
+              "value": "[parameters('minimumTLSVersionForWindowsServers')]"
+            }
+          },
+          "policyDefinitionReferenceId": "auditWindowsTLS",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
+          "parameters": {},
+          "policyDefinitionReferenceId": "securityContactPhoneNumberShouldBeProvidedForSubscription",
+          "groupNames": [
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b6e2945c-0b7b-40f5-9233-7a5323b5cdc6",
+          "parameters": {
+            "listOfLocations": {
+              "value": "[parameters('listOfLocationsForNetworkWatcher')]"
+            }
+          },
+          "policyDefinitionReferenceId": "networkWatcherShouldBeEnabled",
+          "groupNames": [
+            "CMMC_L3_SI.2.216"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
+          "parameters": {},
+          "policyDefinitionReferenceId": "apiAppEnforceHttpsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SC.3.185"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
+          "parameters": {},
+          "policyDefinitionReferenceId": "vmssSystemUpdatesMonitoring",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
+          "parameters": {},
+          "policyDefinitionReferenceId": "webAppDisableRemoteDebuggingMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15",
+          "parameters": {},
+          "policyDefinitionReferenceId": "systemConfigurationsMonitoring",
+          "groupNames": [
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e2c1c086-2d84-4019-bff3-c44ccd95113c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "ensureHTTPVersionLatestForFunctionApp",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityEnableMFAForReadPermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_IA.3.083"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
+          "parameters": {},
+          "policyDefinitionReferenceId": "containerBenchmarkMonitoring",
+          "groupNames": [
+            "CMMC_L3_RM.2.142"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
+          "parameters": {},
+          "policyDefinitionReferenceId": "apiAppDisableRemoteDebuggingMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea53dbee-c6c9-4f0e-9f9e-de0039b78023",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditLinuxVmAllowingRemoteConnectionsFromAccountsWithNoPasswords",
+          "groupNames": [
+            "CMMC_L3_AC.1.001",
+            "CMMC_L3_AC.2.013"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/efbde977-ba53-4479-b8e9-10b957924fbf",
+          "parameters": {},
+          "policyDefinitionReferenceId": "theLogAnalyticsAgentShouldBeInstalledOnVirtualMachineScaleSets",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
+          "parameters": {},
+          "policyDefinitionReferenceId": "webAppRequireLatestTlsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e6955644-301c-44b5-a4c4-528577de6861",
+          "parameters": {
+            "IncludeArcMachines": {
+              "value": "[parameters('IncludeArcMachines')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditLinuxVmPasswdFilePermissions",
+          "groupNames": [
+            "CMMC_L3_IA.1.076"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f47b5582-33ec-4c5c-87c0-b010a6b2e917",
+          "parameters": {
+            "logAnalyticsWorkspaceId": {
+              "value": "[parameters('logAnalyticsWorkspaceIDForVMAgents')]"
+            }
+          },
+          "policyDefinitionReferenceId": "previewAuditLogAnalyticsWorkspaceForVmReportMismatch",
+          "groupNames": [
+            "CMMC_L3_AU.2.042",
+            "CMMC_L3_AU.2.041"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "networkSecurityGroupsOnVirtualMachinesMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.176"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
+          "parameters": {},
+          "policyDefinitionReferenceId": "identityRemoveExternalAccountWithOwnerPermissionsMonitoring",
+          "groupNames": [
+            "CMMC_L3_AC.1.001"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9d614c5-c173-4d56-95a7-b4437057d193",
+          "parameters": {},
+          "policyDefinitionReferenceId": "functionAppRequireLatestTlsMonitoring",
+          "groupNames": [
+            "CMMC_L3_SC.1.175",
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb893a29-21bb-418c-a157-e99480ec364c",
+          "parameters": {},
+          "policyDefinitionReferenceId": "kubernetesServiceVersionUpToDateMonitoring",
+          "groupNames": [
+            "CMMC_L3_SI.1.210"
+          ]
+        },
+        {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/feedbf84-6b99-488c-acc2-71c829aa5ffc",
+          "parameters": {},
+          "policyDefinitionReferenceId": "sqlDbVulnerabilityAssesmentMonitoring",
+          "groupNames": [
+            "CMMC_L3_RM.2.142",
+            "CMMC_L3_SI.1.210"
+          ]
         }
-      },
-      "listOfLocationsForNetworkWatcher": {
-        "type": "Array",
-        "metadata": {
-          "displayName": "[Preview]: List of regions where Network Watcher should be enabled",
-          "description": "Audit if Network Watcher is not enabled for region(s).",
-          "strongType": "location"
-        }
-      },
-      "logAnalyticsWorkspaceIDForVMAgents": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Log Analytics workspace ID for VM agent reporting",
-          "description": "ID (GUID) of the Log Analytics workspace where VMs agents should report."
-        }
-      },
-      "pHPLatestVersionForAppServices": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Latest PHP version",
-          "description": "Latest supported PHP version for App Services"
+      ],
+      "policyDefinitionGroups": [
+        {
+          "name": "CMMC_L3_AC.1.001",
+          "category": "Access Control",
+          "description": "Limit information system access to authorized users, processes acting on behalf of authorized users or devices (including other information systems).",
+          "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AC.1.001"
         },
-        "defaultValue": "7.3"
-      },
-      "windowsImagesToAddToLogAgentAuditScope": {
-        "type": "Array",
-        "metadata": {
-          "displayName": "[Preview]: Optional: List of Windows VM images that support Log Analytics agent to add to audit scope",
-          "description": "A semicolon-separated list of images; Ex: /subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage"
-        },
-        "defaultValue": []
-      },
-      "linuxImagesToAddToLogAgentAuditScope": {
-        "type": "Array",
-        "metadata": {
-          "displayName": "[Preview]: Optional: List of Linux VM images that support Log Analytics agent to add to audit scope",
-          "description": "A semicolon-separated list of images; Ex: /subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage"
-        },
-        "defaultValue": []
-      },
-      "javaLatestVersionForAppServices": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Latest Java version",
-          "description": "Latest supported Java version for App Services"
-        },
-        "defaultValue": "11"
-      },
-      "windowsPythonLatestVersionForAppServices": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Latest Windows Python version",
-          "description": "Latest supported Python version for App Services"
-        },
-        "defaultValue": "3.6"
-      },
-      "linuxPythonLatestVersionForAppServices": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Latest Linux Python version",
-          "description": "Latest supported Python version for App Services"
-        },
-        "defaultValue": "3.8"
-      },
-      "listOfResourceTypesForDiagnosticLogs": {
-        "type": "Array",
-        "metadata": {
-          "displayName": "[Preview]: List of resource types that should have diagnostic logs enabled",
-          "description": "Audit diagnostic setting for selected resource types"
-        },
-        "allowedValues": [
-          "Microsoft.AnalysisServices/servers",
-          "Microsoft.ApiManagement/service",
-          "Microsoft.Network/applicationGateways",
-          "Microsoft.Automation/automationAccounts",
-          "Microsoft.ContainerInstance/containerGroups",
-          "Microsoft.ContainerRegistry/registries",
-          "Microsoft.ContainerService/managedClusters",
-          "Microsoft.Batch/batchAccounts",
-          "Microsoft.Cdn/profiles/endpoints",
-          "Microsoft.CognitiveServices/accounts",
-          "Microsoft.DocumentDB/databaseAccounts",
-          "Microsoft.DataFactory/factories",
-          "Microsoft.DataLakeAnalytics/accounts",
-          "Microsoft.DataLakeStore/accounts",
-          "Microsoft.EventGrid/eventSubscriptions",
-          "Microsoft.EventGrid/topics",
-          "Microsoft.EventHub/namespaces",
-          "Microsoft.Network/expressRouteCircuits",
-          "Microsoft.Network/azureFirewalls",
-          "Microsoft.HDInsight/clusters",
-          "Microsoft.Devices/IotHubs",
-          "Microsoft.KeyVault/vaults",
-          "Microsoft.Network/loadBalancers",
-          "Microsoft.Logic/integrationAccounts",
-          "Microsoft.Logic/workflows",
-          "Microsoft.DBforMySQL/servers",
-          "Microsoft.Network/networkInterfaces",
-          "Microsoft.Network/networkSecurityGroups",
-          "Microsoft.DBforPostgreSQL/servers",
-          "Microsoft.PowerBIDedicated/capacities",
-          "Microsoft.Network/publicIPAddresses",
-          "Microsoft.RecoveryServices/vaults",
-          "Microsoft.Cache/redis",
-          "Microsoft.Relay/namespaces",
-          "Microsoft.Search/searchServices",
-          "Microsoft.ServiceBus/namespaces",
-          "Microsoft.SignalRService/SignalR",
-          "Microsoft.Sql/servers/databases",
-          "Microsoft.Sql/servers/elasticPools",
-          "Microsoft.StreamAnalytics/streamingjobs",
-          "Microsoft.TimeSeriesInsights/environments",
-          "Microsoft.Network/trafficManagerProfiles",
-          "Microsoft.Compute/virtualMachines",
-          "Microsoft.Compute/virtualMachineScaleSets",
-          "Microsoft.Network/virtualNetworks",
-          "Microsoft.Network/virtualNetworkGateways"
-        ],
-        "defaultValue": [
-          "Microsoft.AnalysisServices/servers",
-          "Microsoft.ApiManagement/service",
-          "Microsoft.Network/applicationGateways",
-          "Microsoft.Automation/automationAccounts",
-          "Microsoft.ContainerInstance/containerGroups",
-          "Microsoft.ContainerRegistry/registries",
-          "Microsoft.ContainerService/managedClusters",
-          "Microsoft.Batch/batchAccounts",
-          "Microsoft.Cdn/profiles/endpoints",
-          "Microsoft.CognitiveServices/accounts",
-          "Microsoft.DocumentDB/databaseAccounts",
-          "Microsoft.DataFactory/factories",
-          "Microsoft.DataLakeAnalytics/accounts",
-          "Microsoft.DataLakeStore/accounts",
-          "Microsoft.EventGrid/eventSubscriptions",
-          "Microsoft.EventGrid/topics",
-          "Microsoft.EventHub/namespaces",
-          "Microsoft.Network/expressRouteCircuits",
-          "Microsoft.Network/azureFirewalls",
-          "Microsoft.HDInsight/clusters",
-          "Microsoft.Devices/IotHubs",
-          "Microsoft.KeyVault/vaults",
-          "Microsoft.Network/loadBalancers",
-          "Microsoft.Logic/integrationAccounts",
-          "Microsoft.Logic/workflows",
-          "Microsoft.DBforMySQL/servers",
-          "Microsoft.Network/networkInterfaces",
-          "Microsoft.Network/networkSecurityGroups",
-          "Microsoft.DBforPostgreSQL/servers",
-          "Microsoft.PowerBIDedicated/capacities",
-          "Microsoft.Network/publicIPAddresses",
-          "Microsoft.RecoveryServices/vaults",
-          "Microsoft.Cache/redis",
-          "Microsoft.Relay/namespaces",
-          "Microsoft.Search/searchServices",
-          "Microsoft.ServiceBus/namespaces",
-          "Microsoft.SignalRService/SignalR",
-          "Microsoft.Sql/servers/databases",
-          "Microsoft.Sql/servers/elasticPools",
-          "Microsoft.StreamAnalytics/streamingjobs",
-          "Microsoft.TimeSeriesInsights/environments",
-          "Microsoft.Network/trafficManagerProfiles",
-          "Microsoft.Compute/virtualMachines",
-          "Microsoft.Compute/virtualMachineScaleSets",
-          "Microsoft.Network/virtualNetworks",
-          "Microsoft.Network/virtualNetworkGateways"
-        ]
-      },
-      "minimumTLSVersionForWindowsServers": {
-        "type": "String",
-        "metadata": {
-          "displayName": "[Preview]: Minimum TLS version for Windows web servers",
-          "description": "The minimum TLS protocol version that should be enabled on Windows web servers."
-        },
-        "allowedValues": [
-          "1.2"
-        ],
-        "defaultValue": "1.2"
-      }
-    },
-    "policyDefinitions": [
-      {
-        "policyDefinitionReferenceId": "adaptiveNetworkHardeningRecommendationsShouldBeAppliedOnInternetFacingVirtualMachines",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.1.176"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityDesignateMoreThanOneOwnerMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/09024ccc-0c5f-475e-9457-b7c0d9ed487b",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.3.017"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "diskEncryptionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.3.191"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "emailNotificationToSubscriptionOwnerHighSeverityAlertsEnabled",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b15565f-aa9e-48ba-8619-45960f2c314d",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "functionAppDisableRemoteDebuggingMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e60b895-3786-45da-8377-9c6b4b6ac5f9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AdministratorsGroupInsideWindowsVMsExcludesTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69bf4abd-ca1e-4cf6-8b5a-762d42e61d4f",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          },
-          "membersToExclude": {
-            "value": "[parameters('membersToExcludeInLocalAdministratorsGroup')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AC.3.017"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "sqlDbEncryptionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17k78e20-9358-41c9-923c-fb736d382a12",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.3.191"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "1bc1795ed44a4d489b3b6fff0fd5f9ba",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1bc1795e-d44a-4d48-9b3b-6fff0fd5f9ba",
-        "parameters": {
-          "phpLatestVersion": {
-            "value": "[parameters('pHPLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "diagnosticsLogsInRedisCacheMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22bee202-a82f-4305-9a2a-6d7f44d4dedb",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenNone",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3cf2ab00-13f1-4d0c-8971-2ac904541a7e",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.077",
-          "CMMC_L3_IA.2.078",
-          "CMMC_L3_IA.2.079",
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013",
-          "CMMC_L3_IA.2.081"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenUser",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/497dff13-db2a-4c0f-8603-28fa3b331ab6",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.077",
-          "CMMC_L3_IA.2.078",
-          "CMMC_L3_IA.2.079",
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013",
-          "CMMC_L3_IA.2.081"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Prerequisite_DeployExtensionWindows",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/385f5831-96d4-41db-9a3c-cd3af78aaae6",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.077",
-          "CMMC_L3_IA.2.078",
-          "CMMC_L3_IA.2.079",
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013",
-          "CMMC_L3_IA.2.081"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Prerequisite_DeployExtensionLinux",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1221c620-d201-468c-81e7-2817e6107e84",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.077",
-          "CMMC_L3_IA.2.078",
-          "CMMC_L3_IA.2.079",
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013",
-          "CMMC_L3_IA.2.081"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AuditWindowsVMsThatDoNotRestrictTheMinimumPasswordLengthTo14Characters",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a2d0e922-65d0-40c4-8f87-ea6da2d307a2",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.2.078"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vmssEndpointProtectionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.211"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "logAnalyticsOSImageAudit",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/32133ab0-ee4b-4b44-98d6-042180979d50",
-        "parameters": {
-          "listOfImageIdToInclude_windows": {
-            "value": "[parameters('windowsImagesToAddToLogAgentAuditScope')]"
-          },
-          "listOfImageIdToInclude_linux": {
-            "value": "[parameters('linuxImagesToAddToLogAgentAuditScope')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditLinuxVmAccountsWithNoPasswords",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6ec09a3-78bf-4f8f-99dc-6c77182d0f99",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.1.077",
-          "CMMC_L3_IA.2.078"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "disableUnrestrictedNetworkToStorageAccountMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/34c877ad-507e-4c82-993e-3452a6e0ad3c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013",
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.1.176"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vmssOsVulnerabilitiesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "secureTransferToStorageAccountMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "adaptiveApplicationControlsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_CM.3.068",
-          "CMMC_L3_CM.3.069",
-          "CMMC_L3_CM.2.063"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "496223c3ad654ecd878abae78737e9ed",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "parameters": {
-          "javaLatestVersion": {
-            "value": "[parameters('javaLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityDesignateLessThanOwnersMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f11b553-d42e-4e3a-89be-32ca364cad4c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.3.017"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "securityContactEmailAddressForSubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "webAppRestrictCORSAccessMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5744710e-cc2f-4ee8-8809-3b11e89f4bc9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.2.016"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "logAnalyticsOSImageVMSSAudit",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138",
-        "parameters": {
-          "listOfImageIdToInclude_windows": {
-            "value": "[parameters('windowsImagesToAddToLogAgentAuditScope')]"
-          },
-          "listOfImageIdToInclude_linux": {
-            "value": "[parameters('linuxImagesToAddToLogAgentAuditScope')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithReadPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "functionAppEnforceHttpsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7008174afd104ef0817efc820a951d73",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
-        "parameters": {
-          "windowsPythonLatestVersion": {
-            "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
-          },
-          "linuxPythonLatestVersion": {
-            "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7238174afd104ef0817efc820a951d73",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
-        "parameters": {
-          "windowsPythonLatestVersion": {
-            "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
-          },
-          "linuxPythonLatestVersion": {
-            "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7261b8988a844db89e0418527132abb3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "parameters": {
-          "phpLatestVersion": {
-            "value": "[parameters('pHPLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditWindowsVmShouldNotAllowPrevious24Passwords",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5b054a0d-39e2-4d53-bea3-9734cad2c69b",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.2.079"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "74c3584dafae46f7a20a6f8adba71a16",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c3584d-afae-46f7-a20a-6f8adba71a16",
-        "parameters": {
-          "windowsPythonLatestVersion": {
-            "value": "[parameters('windowsPythonLatestVersionForAppServices')]"
-          },
-          "linuxPythonLatestVersion": {
-            "value": "[parameters('linuxPythonLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vulnerabilityAssessmentMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditWindowsVmEnforcesPasswordComplexityRequirements",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bf16e0bb-31e1-4646-8202-60a235cc7e74",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.2.078"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7f89b1eb583c429a8828af049802c1d9",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7f89b1eb-583c-429a-8828-af049802c1d9",
-        "parameters": {
-          "listOfResourceTypes": {
-            "value": "[parameters('listOfResourceTypesForDiagnosticLogs')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041",
-          "CMMC_L3_AU.3.046"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "systemUpdatesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "88999f4c376a45c8bcb34058f713cf39",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/88999f4c-376a-45c8-bcb3-4058f713cf39",
-        "parameters": {
-          "javaLatestVersion": {
-            "value": "[parameters('javaLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensureHTTPVersionLatestForWebApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8c122334-9d20-4eb8-89ea-ac9a705b74ae",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "apiAppRequireLatestTlsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8cb6aa8b-9e41-4f4e-aa25-089a7ac2581e",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AuditWindowsVMsThatDoNotStorePasswordsUsingReversibleEncryption",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/da0f98fe-a24b-4ad5-af69-bd0400233661",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.1.076"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.076",
-          "CMMC_L3_IA.3.083"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AdministratorsGroupInsideWindowsVMsIncludesTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/30f71ea1-ac77-4f26-9fc5-2d926bbd4ba7",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          },
-          "membersToInclude": {
-            "value": "[parameters('membersToIncludeInLocalAdministratorsGroup')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AC.3.017"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensureHTTPVersionLatestForAPIApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/991310cd-e9f3-47bc-b7b6-f57b557d07db",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "anitmalwareRequiredForWindowsServers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9b597639-28e4-48eb-b506-56b05d366257",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.211"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "9d0b6ea493e24578bf2f6bb17d22b4bc",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "parameters": {
-          "javaLatestVersion": {
-            "value": "[parameters('javaLatestVersionForAppServices')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "nextGenerationFirewallMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.1.176"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "webAppEnforceHttpsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "sqlServerAuditingMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041",
-          "CMMC_L3_AU.3.046"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "theLogAnalyticsAgentShouldBeInstalledOnVirtualMachines",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a70ca396-0a34-413a-88e1-b956c1e683be",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.1.076",
-          "CMMC_L3_IA.3.083"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "advancedDataSecurityShouldBeEnabledOnYourSQLServers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb4388-5bf4-4ad7-ba82-2cd2f41ceae9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041",
-          "CMMC_L3_AU.3.046",
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SC.3.191",
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "advancedDataSecurityShouldBeEnabledOnYourSQLManagedInstances",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041",
-          "CMMC_L3_AU.3.046",
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SC.3.191",
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "endpointProtectionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.211"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "auditWindowsTLS",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5752e6d6-1206-46d8-8ab1-ecc2f71a8112",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          },
-          "minimumTLSVersion": {
-            "value": "[parameters('minimumTLSVersionForWindowsServers')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "securityContactPhoneNumberShouldBeProvidedForSubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "networkWatcherShouldBeEnabled",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b6e2945c-0b7b-40f5-9233-7a5323b5cdc6",
-        "parameters": {
-          "listOfLocations": {
-            "value": "[parameters('listOfLocationsForNetworkWatcher')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_SI.2.216"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "apiAppEnforceHttpsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SC.3.185"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vmssSystemUpdatesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "webAppDisableRemoteDebuggingMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "systemConfigurationsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensureHTTPVersionLatestForFunctionApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e2c1c086-2d84-4019-bff3-c44ccd95113c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityEnableMFAForReadPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_IA.3.083"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "containerBenchmarkMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_RM.2.142"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "apiAppDisableRemoteDebuggingMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditLinuxVmAllowingRemoteConnectionsFromAccountsWithNoPasswords",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea53dbee-c6c9-4f0e-9f9e-de0039b78023",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AC.1.001",
-          "CMMC_L3_AC.2.013"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "theLogAnalyticsAgentShouldBeInstalledOnVirtualMachineScaleSets",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/efbde977-ba53-4479-b8e9-10b957924fbf",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "webAppRequireLatestTlsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditLinuxVmPasswdFilePermissions",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e6955644-301c-44b5-a4c4-528577de6861",
-        "parameters": {
-          "IncludeArcMachines": {
-            "value": "[parameters('IncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_IA.1.076"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "previewAuditLogAnalyticsWorkspaceForVmReportMismatch",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f47b5582-33ec-4c5c-87c0-b010a6b2e917",
-        "parameters": {
-          "logAnalyticsWorkspaceId": {
-            "value": "[parameters('logAnalyticsWorkspaceIDForVMAgents')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_L3_AU.2.042",
-          "CMMC_L3_AU.2.041"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "networkSecurityGroupsOnVirtualMachinesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.176"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_AC.1.001"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "functionAppRequireLatestTlsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9d614c5-c173-4d56-95a7-b4437057d193",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SC.1.175",
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "kubernetesServiceVersionUpToDateMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb893a29-21bb-418c-a157-e99480ec364c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_SI.1.210"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "sqlDbVulnerabilityAssesmentMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/feedbf84-6b99-488c-acc2-71c829aa5ffc",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_L3_RM.2.142",
-          "CMMC_L3_SI.1.210"
-        ]
-      }
-    ],
-    "policyDefinitionGroups": [
-      {
-        "name": "CMMC_L3_AC.1.001",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AC.1.001"
-      },
       {
         "name": "CMMC_L3_AC.1.002",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AC.1.002"
@@ -1112,6 +1114,10 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AC.1.004"
       },
       {
+        "name": "CMMC_L3_AM.3.036",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AM.3.036"
+      },
+      {
         "name": "CMMC_L3_AT.2.056",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AT.2.056"
       },
@@ -1128,6 +1134,10 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AU.2.042"
       },
       {
+        "name": "CMMC_L3_AU.2.044",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AU.2.044"
+      },
+      {
         "name": "CMMC_L3_AU.2.041",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AU.2.041"
       },
@@ -1138,6 +1148,10 @@
       {
         "name": "CMMC_L3_AU.3.046",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AU.3.046"
+      },
+      {
+        "name": "CMMC_L3_AU.3.048",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_AU.3.048"
       },
       {
         "name": "CMMC_L3_AU.3.051",
@@ -1244,6 +1258,22 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.2.092"
       },
       {
+        "name": "CMMC_L3_IR.2.093",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.2.093"
+      },
+      {
+        "name": "CMMC_L3_IR.2.094",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.2.094"
+      },
+      {
+        "name": "CMMC_L3_IR.2.095",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.2.095"
+      },
+      {
+        "name": "CMMC_L3_IR.2.097",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.2.097"
+      },
+      {
         "name": "CMMC_L3_IR.3.098",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IR.3.098"
       },
@@ -1344,6 +1374,14 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_PE.3.136"
       },
       {
+        "name": "CMMC_L3_RE.2.137",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RE.2.137"
+      },
+      {
+        "name": "CMMC_L3_RE.3.139",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RE.3.139"
+      },
+      {
         "name": "CMMC_L3_RM.2.141",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RM.2.141"
       },
@@ -1354,6 +1392,18 @@
       {
         "name": "CMMC_L3_RM.2.143",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RM.2.143"
+      },
+      {
+        "name": "CMMC_L3_RM.3.144",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RM.3.144"
+      },
+      {
+        "name": "CMMC_L3_RM.3.146",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RM.3.146"
+      },
+      {
+        "name": "CMMC_L3_RM.3.147",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_RM.3.147"
       },
       {
         "name": "CMMC_L3_CA.2.158",
@@ -1368,12 +1418,24 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_CA.3.161"
       },
       {
+        "name": "CMMC_L3_CA.3.162",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_CA.3.162"
+      },
+      {
         "name": "CMMC_L3_CA.2.157",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_CA.2.157"
       },
       {
+        "name": "CMMC_L3_SA.3.169",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SA.3.169"
+      },
+      {
         "name": "CMMC_L3_SC.1.175",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.1.175"
+      },
+      {
+        "name": "CMMC_L3_SC.2.179",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.2.179"
       },
       {
         "name": "CMMC_L3_SC.3.180",
@@ -1436,6 +1498,14 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.191"
       },
       {
+        "name": "CMMC_L3_SC.3.192",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.192"
+      },
+      {
+        "name": "CMMC_L3_SC.3.193",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.193"
+      },
+      {
         "name": "CMMC_L3_SI.1.210",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SI.1.210"
       },
@@ -1462,6 +1532,18 @@
       {
         "name": "CMMC_L3_SI.2.217",
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SI.2.217"
+      },
+      {
+        "name": "CMMC_L3_SI.3.218",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.218"
+      },
+      {
+        "name": "CMMC_L3_SI.3.219",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.219"
+      },
+      {
+        "name": "CMMC_L3_SI.3.220",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_SC.3.220"
       }
     ]
   },
