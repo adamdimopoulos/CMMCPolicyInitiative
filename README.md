@@ -16,7 +16,7 @@ This repository contains a sample Azure Policy Initiative for CMMC Level 3.  The
   ```powershell
   ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_Policyinitiative.json -subscriptionId 00000000-0000-0000-0000-000000000000
   ```
-  **NOTE: The Azure CLI and PowerShell modules refer to a Policy Initiative as a Policy Set.  Additionally, the GitHub workflow and policies folders can be ignored for the sake of evaluating this sample.**
+  **NOTE: The Azure CLI and PowerShell modules refer to a Policy Initiative as a Policy Set.**
   
  ## Next Steps
 1. Browse to the Azure Portal and open the **Policy** blade. Verify you see a custom Initiative named **[Preview]: CMMC L3**.
