@@ -1,21 +1,29 @@
-# PolicyInitiatives
-This repository contains the sample Policy Initiative for CMMC Level 3.  The underlying policies and controls are derived from those in the NIST 800-171 initiative, plus a few extra polices to address a subset the 20 controls, which are the delta between 800-171 and CMMC Level 3.  Additional policies for both frameworks will be added to this repository over time and prior to releasing in preview later this year.
+# Microsoft CMMC Acceleration Program
+This resource is part of the Microsoft Cybersecurity Maturity Model Certification (CMMC) Acceleration Program. Go [here](https://aka.ms/CMMCResponse) to learn more about the program.
 
-# Prerequisites
-This doc assumes you have a basic understanding of how Azure Policy and Policy Initiatives work. 
+# Azure Policy Initiative for CMMC Level 3 (Preview Release)
+This repository contains a sample Azure Policy Initiative for CMMC Level 3.  The policies and controls are derived from those in the NIST SP 800-171, plus additional polices to address the delta between NIST SP 800-171 and CMMC Level 3.  Additional policies will be added to this repository over time.
+
+>_The Policy Initiative for CMMC Level 3 is based upon available information to date and is provided as a sample resource only. Microsoft is not a CMMC accrediting body and thus cannot guarantee any outcome under the formal CMMC review process._
+
+## Prerequisites
+1. You should have a basic understanding of [Azure Policy and Policy Initiatives](https://azure.microsoft.com/en-us/services/azure-policy/) before applying this sample. Do not apply this Policy Initiative in any production subscription without first understanding and accepting the potential impact.
   
-# Deployment
+## Deployment
 1. Download this repo and extract to a desired local folder.
 
-2. Execute the included powershell script "deploy-policySetDef.ps1", substituting your own subscriptionid and path to the definition file: 
+2. Run the included PowerShell script **deploy-policySetDef.ps1**. Substitute your own SubscriptionId and path to the definition file.
   ```powershell
   ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_Policyinitiative.json -subscriptionId 00000000-0000-0000-0000-000000000000
   ```
+  **NOTE: The Azure CLI and PowerShell modules refer to a Policy Initiative as a Policy Set.  Additionally, the GitHub workflow and policies folders can be ignored for the sake of evaluating this sample.**
   
-  **In Azure CLI and Powershell modules, a Policy Initiative is referred to as a Policy Set.  Additionally, the github workflow and policies folders can be ignored for the sake of evaluating this sample**
-  
-  # Next Steps
-  
-Go to the Azure portal > Policy blade to verify you see a custom initiative named [Preview]: CMMC L3.  You can edit or assign the policy initiative directly from the portal to begin evaluation.  Alternatively, proceed to the [Blueprints](https://github.com/adamdimopoulos/Blueprints) repo and follow the instructions to import the CMMC L3 Blueprint into your subscription, which will assign the policy initiative for you.  Please provide applicable [feedback](https://aka.ms/feedbackazureblueprintcmmc) using the link provided in either repo.
+ ## Next Steps
+1. Browse to the Azure Portal and open the **Policy** blade. Verify you see a custom Initiative named **[Preview]: CMMC L3**.
 
+2. You can edit the Policy Initiative to examine and understand what it contains.
+
+3. Browse to the [Azure Blueprint for CMMC Level 3](https://github.com/adamdimopoulos/Blueprints) repo and follow the instructions to import the Blueprint. This will assign the above Policy Initiative for you.
+
+4. Please review all aspects of this Policy Initiative and provide [feedback](https://aka.ms/feedbackazureblueprintcmmc).
   
