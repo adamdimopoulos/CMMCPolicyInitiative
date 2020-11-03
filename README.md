@@ -12,10 +12,10 @@ This doc assumes you have a basic understanding of how Azure Policy and Policy I
   ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_Policyinitiative.json -subscriptionId 00000000-0000-0000-0000-000000000000
   ```
   
-  **In Azure CLI and Powershell modules, a Policy Initiative is referred to as a Policy Set.  Also the github workflow and policies folders can be ignored for the sake of evaluating this sample**
+  **In Azure CLI and Powershell modules, a Policy Initiative is referred to as a Policy Set.  Additionally, the github workflow and policies folders can be ignored for the sake of evaluating this sample**
   
   # Next Steps
   
-Go to the Azure portal > Policy blade to verify you see a custom initiative named [Preview]: CMMC L3.  You can edit or assign the policy initiative directly from the portal to begin evaluation.  Or proceed to the [Blueprints](https://github.com/adamdimopoulos/Blueprints) repo and follow the instructions to import the CMMC L3 Blueprint into your subscription, which will assign the policy initiative for you.  Please provide applicable [feedback](https://aka.ms/feedbackazureblueprintcmmc) using the link provided in either repo.
+Go to the Azure portal > Policy blade to verify you see a custom initiative named [Preview]: CMMC L3.  You can edit or assign the policy initiative directly from the portal to begin evaluation.  Alternatively, proceed to the [Blueprints](https://github.com/adamdimopoulos/Blueprints) repo and follow the instructions to import the CMMC L3 Blueprint into your subscription, which will assign the policy initiative for you.  Please provide applicable [feedback](https://aka.ms/feedbackazureblueprintcmmc) using the link provided in either repo.
 
   
