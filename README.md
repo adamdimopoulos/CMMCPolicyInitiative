@@ -12,7 +12,7 @@ This doc assumes you have a basic understanding of how Azure Policy and Policy I
   ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_Policyinitiative.json -subscriptionId 00000000-0000-0000-0000-000000000000
   ```
   
-  **In command Azure CLI and Powershell modules a Policy Initiative is referred to as a Policy Set.  Also the github workflow and policies folders can be ignored for the sake of evaluating this sample**
+  **In Azure CLI and Powershell modules a Policy Initiative is referred to as a Policy Set.  Also the github workflow and policies folders can be ignored for the sake of evaluating this sample**
   
   # Next Steps
   
