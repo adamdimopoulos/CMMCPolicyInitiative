@@ -1,7 +1,7 @@
 # Microsoft CMMC Acceleration Program
 This resource is part of the Microsoft Cybersecurity Maturity Model Certification (CMMC) Acceleration Program. Go [here](https://aka.ms/CMMCResponse) to learn more about the program.
 
-# Azure Policy Initiative for CMMC Level 3 (Preview Release)
+# Azure Policy Initiative for CMMC Level 3 (Preview)
 This repository contains a sample Azure Policy Initiative for CMMC Level 3.  The policies and controls are derived from those in the NIST SP 800-171, plus additional polices to address the delta between NIST SP 800-171 and CMMC Level 3.  Additional policies will be added to this repository over time.
 
 >_The Policy Initiative for CMMC Level 3 is based upon available information to date and is provided as a sample resource only. Microsoft is not a CMMC accrediting body and thus cannot guarantee any outcome under the formal CMMC review process._
