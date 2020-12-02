@@ -9,7 +9,7 @@ This repository contains a sample Azure Policy Initiative for CMMC Level 3.  The
 ## Prerequisites
 1. You should have a basic understanding of [Azure Policy and Policy Initiatives](https://azure.microsoft.com/en-us/services/azure-policy/) before applying this sample. Do not apply this Policy Initiative in any production subscription without first understanding and accepting the potential impact.
 
-2. There are separate policy initiatives for commercial and gov clouds.  When deploying the initiative please select the appropriate file according to your tenant.  For reference the file named 'CMMCL3_Policyinitiative.json' is for commercial deployments only.  The file 'CMMCL3_Policyinitiaitve_Gov.json' is modified to work in Azure gov. deployments.
+2. There are separate policy initiatives for commercial and gov clouds.  When deploying the initiative please select the appropriate file according to your tenant.  For reference the file named 'CMMCL3_Policyinitiative.json' is for commercial deployments only.  The file named 'CMMCL3_Policyinitiaitve_Gov.json' is modified to work in Azure gov. deployments.
   
 ## Deployment
 1. Download this repo and extract to a desired local folder.
