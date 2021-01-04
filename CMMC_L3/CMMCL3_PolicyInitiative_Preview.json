@@ -2570,11 +2570,11 @@
    },
    {
     "name": "CMMC_L3_IA.2.081",
-    "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IA.1.076"
+    "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IA.1.081"
    },
    {
     "name": "CMMC_L3_IA.2.082",
-    "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IA.1.076"
+    "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/CMMC_L3_IA.1.082"
    },
    {
     "name": "CMMC_L3_IR.2.092",
