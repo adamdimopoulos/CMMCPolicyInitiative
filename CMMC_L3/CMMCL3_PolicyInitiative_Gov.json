@@ -201,7 +201,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/09024ccc-0c5f-475e-9457-b7c0d9ed487b",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.3.017"
+     "CMMC_L3_AC.3.017",
+     "CMMC_L3_SC.3.181"
     ]
    },
    {
@@ -209,7 +210,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SC.3.191"
+     "CMMC_L3_SC.3.191",
+     "CMMC_L3_SC.3.177"
     ]
    },
    {
@@ -217,7 +219,9 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b15565f-aa9e-48ba-8619-45960f2c314d",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.2.216"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_IR.2.092",
+     "CMMC_L3_SI.2.217"
     ]
    },
    {
@@ -226,15 +230,17 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_AC.1.001",
-     "CMMC_L3_AC.2.013"
+     "CMMC_L3_AC.2.013",
+     "CMMC_L3_CM.3.068"
     ]
    },
-    {
+   {
     "policyDefinitionReferenceId": "sqlDbEncryptionMonitoring",
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17k78e20-9358-41c9-923c-fb736d382a12",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SC.3.191"
+     "CMMC_L3_SC.3.191",
+     "CMMC_L3_SC.3.177"
     ]
    },
    {
@@ -255,7 +261,8 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.3.185"
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_AC.1.002"
     ]
    },
    {
@@ -263,7 +270,9 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.1.211"
+     "CMMC_L3_SI.1.211",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161"
     ]
    },
    {
@@ -280,7 +289,8 @@
     "groupNames": [
      "CMMC_L3_AU.2.042",
      "CMMC_L3_AU.2.041",
-     "CMMC_L3_AU.3.048"
+     "CMMC_L3_AU.3.048",
+     "CMMC_L3_AU.3.046"
     ]
    },
    {
@@ -291,7 +301,13 @@
      "CMMC_L3_AC.1.001",
      "CMMC_L3_AC.2.013",
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.1.176"
+     "CMMC_L3_SC.1.176",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.3.191",
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_CM.3.068"
     ]
    },
    {
@@ -299,8 +315,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.2.142",
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -309,7 +325,8 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.3.185"
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_AC.1.002"
     ]
    },
    {
@@ -319,7 +336,10 @@
     "groupNames": [
      "CMMC_L3_CM.3.068",
      "CMMC_L3_CM.3.069",
-     "CMMC_L3_CM.2.063"
+     "CMMC_L3_CM.2.063",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161",
+     "CMMC_L3_CM.2.061"
     ]
    },
    {
@@ -339,7 +359,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f11b553-d42e-4e3a-89be-32ca364cad4c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.3.017"
+     "CMMC_L3_AC.3.017",
+     "CMMC_L3_SC.3.181"
     ]
    },
    {
@@ -347,15 +368,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.2.216"
-    ]
-   },
-   {
-    "policyDefinitionReferenceId": "webAppRestrictCORSAccessMonitoring",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5744710e-cc2f-4ee8-8809-3b11e89f4bc9",
-    "parameters": {},
-    "groupNames": [
-     "CMMC_L3_AC.2.016"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_IR.2.092"
     ]
    },
    {
@@ -372,7 +386,8 @@
     "groupNames": [
      "CMMC_L3_AU.2.042",
      "CMMC_L3_AU.2.041",
-     "CMMC_L3_AU.3.048"
+     "CMMC_L3_AU.3.048",
+     "CMMC_L3_AU.3.046"
     ]
    },
    {
@@ -380,7 +395,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.1.001"
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.2.007"
     ]
    },
    {
@@ -388,7 +404,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.1.001"
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.2.007"
     ]
    },
    {
@@ -405,7 +422,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.3.185"
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_AC.1.002"
     ]
    },
    {
@@ -470,9 +490,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.2.142",
      "CMMC_L3_SI.1.210",
-     "CMMC_L3_RM.3.144"
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -487,7 +506,8 @@
      "CMMC_L3_AU.2.042",
      "CMMC_L3_AU.2.041",
      "CMMC_L3_AU.3.046",
-     "CMMC_L3_AU.3.048"
+     "CMMC_L3_AU.3.048",
+     "CMMC_L3_AU.3.049"
     ]
    },
    {
@@ -524,7 +544,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_SC.3.185"
     ]
    },
    {
@@ -532,8 +555,10 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IA.1.076",
-     "CMMC_L3_IA.3.083"
+     "CMMC_L3_IA.3.083",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_IA.1.077"
     ]
    },
    {
@@ -549,7 +574,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9b597639-28e4-48eb-b506-56b05d366257",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.1.211"
+     "CMMC_L3_SI.1.211",
+     "CMMC_L3_SI.1.213"
     ]
    },
    {
@@ -570,7 +596,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.1.176"
+     "CMMC_L3_SC.1.176",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.2.064",
+     "CMMC_L3_CM.3.068"
     ]
    },
    {
@@ -579,7 +608,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.3.185"
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_AC.1.002"
     ]
    },
    {
@@ -589,7 +621,9 @@
     "groupNames": [
      "CMMC_L3_AU.2.042",
      "CMMC_L3_AU.2.041",
-     "CMMC_L3_AU.3.046"
+     "CMMC_L3_AU.3.046",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161"
     ]
    },
    {
@@ -607,8 +641,10 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IA.1.076",
-     "CMMC_L3_IA.3.083"
+     "CMMC_L3_IA.3.083",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_IA.1.077"
     ]
    },
    {
@@ -621,7 +657,11 @@
      "CMMC_L3_AU.3.046",
      "CMMC_L3_RM.2.142",
      "CMMC_L3_SC.3.191",
-     "CMMC_L3_SI.2.216"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -634,7 +674,11 @@
      "CMMC_L3_AU.3.046",
      "CMMC_L3_RM.2.142",
      "CMMC_L3_SC.3.191",
-     "CMMC_L3_SI.2.216"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -642,7 +686,11 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.1.211"
+     "CMMC_L3_SI.1.211",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161"
     ]
    },
    {
@@ -650,7 +698,9 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.2.216"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_IR.2.092"
     ]
    },
    {
@@ -662,7 +712,11 @@
      }
     },
     "groupNames": [
-     "CMMC_L3_SI.2.216"
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_AC.2.013",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_SC.3.183"
     ]
    },
    {
@@ -671,7 +725,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SC.3.185"
+     "CMMC_L3_SC.3.185",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_AC.1.002"
     ]
    },
    {
@@ -688,7 +745,8 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_AC.1.001",
-     "CMMC_L3_AC.2.013"
+     "CMMC_L3_AC.2.013",
+     "CMMC_L3_CM.3.068"
     ]
    },
    {
@@ -696,8 +754,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.2.142",
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -713,7 +771,10 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IA.3.083"
+     "CMMC_L3_IA.3.083",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_IA.1.077"
     ]
    },
    {
@@ -721,7 +782,7 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.2.142"
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -730,7 +791,8 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_AC.1.001",
-     "CMMC_L3_AC.2.013"
+     "CMMC_L3_AC.2.013",
+     "CMMC_L3_CM.3.068"
     ]
    },
    {
@@ -738,7 +800,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.1.001"
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_SC.3.181"
     ]
    },
    {
@@ -757,7 +820,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_SC.3.185"
     ]
    },
    {
@@ -771,7 +837,8 @@
     "groupNames": [
      "CMMC_L3_AU.2.042",
      "CMMC_L3_AU.2.041",
-     "CMMC_L3_AU.3.048"
+     "CMMC_L3_AU.3.048",
+     "CMMC_L3_AU.3.046"
     ]
    },
    {
@@ -779,7 +846,12 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SC.1.176"
+     "CMMC_L3_SC.1.176",
+     "CMMC_L3_AC.1.003",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
     ]
    },
    {
@@ -787,7 +859,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_AC.1.001"
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_SC.3.181"
     ]
    },
    {
@@ -796,7 +869,10 @@
     "parameters": {},
     "groupNames": [
      "CMMC_L3_SC.1.175",
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_IA.3.084",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_SC.3.185"
     ]
    },
    {
@@ -804,7 +880,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb893a29-21bb-418c-a157-e99480ec364c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SI.1.210"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -812,28 +889,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/feedbf84-6b99-488c-acc2-71c829aa5ffc",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.2.142",
-     "CMMC_L3_SI.1.210"
-    ]
-   },
-   {
-    "policyDefinitionReferenceId": "Audit Log Analytics agent deployment in virtual machine scale sets - VM Image (OS) unlisted_1",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138",
-    "parameters": {},
-    "groupNames": [
-     "CMMC_L3_AU.3.048"
-    ]
-   },
-   {
-    "policyDefinitionReferenceId": "Deploy Log Analytics agent for Linux VMs_1",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/053d3325-282c-4e5c-b944-24faffd30d77",
-    "parameters": {
-     "logAnalytics": {
-      "value": "[parameters('logAnalyticsWorkspaceIDForVMAgents')]"
-     }
-    },
-    "groupNames": [
-     "CMMC_L3_AU.3.048"
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_RM.2.143"
     ]
    },
    {
@@ -845,7 +902,15 @@
      }
     },
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_AC.3.021",
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161",
+     "CMMC_L3_CM.2.065"
     ]
    },
    {
@@ -853,7 +918,8 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6e2593d9-add6-4083-9c9b-4b7d2188c899",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_IR.2.092"
     ]
    },
    {
@@ -876,7 +942,8 @@
      }
     },
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_AU.3.048"
     ]
    },
    {
@@ -884,15 +951,18 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac076320-ddcf-4066-b451-6154267e8ad2",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
-    ]
-   },
-   {
-    "policyDefinitionReferenceId": "A security contact phone number should be provided for your subscription_1",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
-    "parameters": {},
-    "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161",
+     "CMMC_L3_CM.2.061",
+     "CMMC_L3_CM.2.063",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -900,7 +970,10 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c251913d-7d24-4958-af87-478ed3b9ba41",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SC.3.183"
     ]
    },
    {
@@ -916,7 +989,11 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/12430be1-6cc8-4527-a9a8-e3d38f250096",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -924,7 +1001,11 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/425bea59-a659-4cbb-8d31-34499bd030b8",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -932,7 +1013,11 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/564feb30-bf6a-4854-b4bb-0d2d2d1e6c66",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
@@ -940,20 +1025,16 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/055aa869-bc98-4af8-bafc-23f1ab6ffe2c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.2.064"
     ]
    },
    {
     "policyDefinitionReferenceId": "Deploy Threat Detection on SQL servers_1",
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/36d49e87-48c4-4f2e-beed-ba4ed02b71f5",
-    "parameters": {},
-    "groupNames": [
-     "CMMC_L3_IR.2.093"
-    ]
-   },
-   {
-    "policyDefinitionReferenceId": "Monitor missing Endpoint Protection in Azure Security Center_1",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
     "parameters": {},
     "groupNames": [
      "CMMC_L3_IR.2.093"
@@ -991,7 +1072,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a1181c5f-672a-477a-979a-7d58aa086233",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_RM.3.144"
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161",
+     "CMMC_L3_CM.2.063"
     ]
    },
    {
@@ -999,7 +1086,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216"
     ]
    },
    {
@@ -1007,7 +1100,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4da35fc9-c9e7-4960-aec9-797fe7d9051d",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216"
     ]
    },
    {
@@ -1015,7 +1114,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/523b5cd1-3e23-492f-a539-13118b6d1e3a",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216"
     ]
    },
    {
@@ -1023,7 +1128,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7fe3b40f-802b-4cdd-8bd4-fd799c948cc2",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216"
     ]
    },
    {
@@ -1031,7 +1142,13 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c25d9a16-bc35-4e15-a7e5-9db606bf9ed4",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_IR.2.093"
+     "CMMC_L3_IR.2.093",
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_SI.1.213",
+     "CMMC_L3_SI.2.216"
     ]
    },
    {
@@ -1039,7 +1156,541 @@
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b0f33259-77d7-4c9e-aac6-3aabcfae693c",
     "parameters": {},
     "groupNames": [
-     "CMMC_L3_SC.2.179"
+     "CMMC_L3_SC.2.179",
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.007",
+     "CMMC_L3_AC.2.013",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Cognitive Services accounts should restrict network access_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/037eea7a-bd0a-46c5-9a66-03aea78705d3",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Public network access should be disabled for Cognitive Services accounts_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0725b4dd-7e76-479c-a735-68e7ee23d5ca",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "CORS should not allow every resource to access your Function Apps_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0820b7b9-23aa-4725-a1ce-ae4558f718e5",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Public network access on Azure SQL Database should be disabled_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1b8ca024-1d5c-4dec-8995-b1a932b41780",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "SSH access from the Internet should be blocked_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2c89a2e5-7285-40fe-afe0-ae8654b92fab",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.1.003"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "CORS should not allow every resource to access your API App_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/358c20a6-3f9e-4f0e-97ff-c6ce485e2aac",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "CORS should not allow every resource to access your Web Applications_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5744710e-cc2f-4ee8-8809-3b11e89f4bc9",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Role-Based Access Control (RBAC) should be used on Kubernetes Services_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac4a19c2-fa67-49b4-8ae5-0b2e78c49457",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.007",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_CM.2.062"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Storage accounts should allow access from trusted Microsoft services_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c9d007d0-c057-4772-b18c-01e546713bcd",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_SC.3.183"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Container registries should not allow unrestricted network access_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d0793b48-0edc-4296-a390-4c75d1bdfd71",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.2.016",
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "RDP access from the Internet should be blocked_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e372f825-a257-4fb8-9175-797a8a8627d6",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.001",
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_AC.1.003",
+     "CMMC_L3_AC.2.015",
+     "CMMC_L3_AC.2.016"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Enforce SSL connection should be enabled for PostgreSQL database servers_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d158790f-bfb0-486c-8631-2dc6b4e8e6af",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_SC.3.185"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Enforce SSL connection should be enabled for MySQL database servers_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e802a67a-daf5-4436-9ea6-f6d821dd0c5d",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.1.002",
+     "CMMC_L3_SC.3.190",
+     "CMMC_L3_SC.3.185"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Audit usage of custom RBAC rules_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a451c1ef-c6ca-483d-87ed-f49761e3ffb5",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.3.018"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "An activity log alert should exist for specific Administrative operations_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b954148f-4c11-4c38-8221-be76711e194a",
+    "parameters": {
+     "operationName": {
+      "value": "Microsoft.Network/networkSecurityGroups/delete"
+     }
+    },
+    "groupNames": [
+     "CMMC_L3_AC.3.018",
+     "CMMC_L3_AC.3.021",
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.065"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Virtual machines should have the Guest Configuration extension_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ae89ebca-1c92-4898-ac2c-9f63decb045c",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.3.021"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Guest Configuration extension should be deployed to Azure virtual machines with system assigned mana_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d26f7642-7545-4e18-9b75-8c9bbdee3a9a",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AC.3.021"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1a4e592a-6a6e-44a5-9814-e36264ca96e7",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_SI.2.217"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure subscriptions should have a log profile for Activity Log_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7796937f-307b-4598-941c-67d3a05ebfe7",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.065"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "An activity log alert should exist for specific Policy operations_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c5447c04-a4d7-4ba8-a263-c9ee321a6858",
+    "parameters": {
+     "operationName": {
+      "value": "Microsoft.Authorization/policyAssignments/delete"
+     }
+    },
+    "groupNames": [
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_AU.3.049",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.061",
+     "CMMC_L3_CM.2.065"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Monitor should collect activity logs from all regions_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41388f1c-2db0-4c25-95b2-35d7f5ccbfa9",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AU.2.041",
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_SI.2.216",
+     "CMMC_L3_SI.2.217",
+     "CMMC_L3_CM.2.065"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Activity log should be retained for at least one year_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b02aacc0-b073-424e-8298-42b22829ee0a",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_AU.2.042",
+     "CMMC_L3_SI.2.217"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Vulnerability Assessment settings for SQL server should contain an email address to receive scan rep_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/057d6cfe-9c4f-4a6d-bc60-14420ea1f1a9",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_IR.2.092",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_RM.3.144",
+     "CMMC_L3_RM.2.141"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for MariaDB_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0ec47710-77ff-4a3d-9181-6aa50af424d0",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_RE.2.137",
+     "CMMC_L3_RE.3.139"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for PostgreSQL_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48af4db5-9b8b-401c-8e74-076be876a430",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_RE.2.137",
+     "CMMC_L3_RE.3.139"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for MySQL_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/82339799-d096-41ae-8538-b108becf0970",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_RE.2.137",
+     "CMMC_L3_RE.3.139"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Vulnerability assessment should be enabled on SQL Managed Instance_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1b7aa243-30e4-4c9e-bca8-d0d3022b634a",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Vulnerability assessment should be enabled on your SQL servers_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ef2a8f2a-b3d9-49cd-a8a8-9a3aaaf647d9",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_RM.2.141",
+     "CMMC_L3_RM.2.142",
+     "CMMC_L3_RM.2.143",
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Non-internet-facing virtual machines should be protected with network security groups_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bb91dfba-c30d-4263-9add-9c2384e659a6",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.1.175",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Subnets should be associated with a Network Security Group_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e71308d3-144b-4262-b144-efdc3cc90517",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.1.176",
+     "CMMC_L3_SC.3.183",
+     "CMMC_L3_SC.3.180",
+     "CMMC_L3_CM.3.068"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Cognitive Services accounts should enable data encryption_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2bdd0062-9d75-436e-89df-487dd8e4b3c7",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Storage accounts should have infrastructure encryption_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4733ea7b-a883-42fe-8cac-97454c2a9e4a",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Cognitive Services accounts should enable data encryption with customer-managed key_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/67121cc7-ff39-4ab8-b7e3-95b84dab487d",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Storage account should use customer-managed key for encryption_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6fac406b-40ca-413b-bf8e-0bf964659c25",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Data Explorer encryption at rest should use a customer-managed key_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81e74cea-30fd-40d5-802f-d72103c2aaaa",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Data Box jobs should enable double encryption for data at rest on the device_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c349d81b-9985-44ae-a8da-ff98d108ede8",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Disk encryption should be enabled on Azure Data Explorer_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f4b53539-8df9-40e4-86c6-6b607703bd4e",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Double encryption should be enabled on Azure Data Explorer_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ec068d99-e9c7-401f-8cef-5bdde4e6ccf1",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "SQL managed instances should use customer-managed keys to encrypt data at rest_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/048248b0-55cd-46da-b1ff-39efd52db260",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "SQL servers should use customer-managed keys to encrypt data at rest_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0d134df8-db83-46fb-ad72-fe0c9428c8dd",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Unattached disks should be encrypted_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2c89a2e5-7285-40fe-afe0-ae8654b92fb2",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Automation account variables should be encrypted_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3657f5a0-770e-44a3-b44e-9431ba1e9735",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Container registries should be encrypted with a customer-managed key (CMK)_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5b9159ae-1701-4a6f-9a7a-aa9c8ddd0580",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Service Fabric clusters should have the ClusterProtectionLevel property set to EncryptAndSign_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/617c02be-7f02-4efd-8836-3180d47b6c68",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177",
+     "CMMC_L3_SC.3.191"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Both operating systems and data disks in Azure Kubernetes Service clusters should be encrypted by cu_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7d7be79c-23ba-4033-84dd-45e2a5ccdd67",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Stream Analytics jobs should use customer-managed keys to encrypt data_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/87ba29ef-1ab3-4d82-b763-87fcd4f531f7",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Azure Synapse workspaces should use customer-managed keys to encrypt data at rest_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f7d52b2d-e161-4dfa-a82b-55e564167385",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.177"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Microsoft Antimalware for Azure should be configured to automatically update protection signatures_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c43e4a30-77cb-48ab-a4dd-93f175c63b57",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SI.1.210",
+     "CMMC_L3_SI.1.211",
+     "CMMC_L3_SI.1.212",
+     "CMMC_L3_SI.1.213"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Key vault should have purge protection enabled_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b60c0b2-2dc2-4e1c-b5c9-abbed971de53",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.187"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Key vault should have soft delete enabled_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.187"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "An Azure Active Directory administrator should be provisioned for SQL servers_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f314764-cb73-4fc9-b863-8eca98ac36e9",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_SC.3.181"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Allowlist rules in your adaptive application control policy should be updated_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
+    "parameters": {},
+    "groupNames": [
+     "CMMC_L3_CA.2.158",
+     "CMMC_L3_CA.3.161",
+     "CMMC_L3_CM.2.063",
+     "CMMC_L3_CM.3.068"
     ]
    }
   ],
@@ -1567,5 +2218,5 @@
   ]
  },
  "type": "Microsoft.Authorization/policySetDefinitions",
- "name": "CMMCL3"
-}
+ "name": "CMMCL3-Gov"
+ }
