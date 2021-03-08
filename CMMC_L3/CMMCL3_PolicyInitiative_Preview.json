@@ -6213,6 +6213,6 @@
       }
     ]
   },
-  "id": "/providers/Microsoft.Authorization/policySetDefinitions/b5629c75-5c77-4422-87b9-2509e680f8de",
-  "name": "b5629c75-5c77-4422-87b9-2509e680f8de"
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "CMMCL3"
 }
