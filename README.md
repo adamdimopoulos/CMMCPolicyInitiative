@@ -16,7 +16,7 @@ This repository contains a sample Azure Policy Initiative for CMMC Level 3.  The
 
 2. Run the included PowerShell script **deploy-policySetDef.ps1**. Substitute your own SubscriptionId and path to the definition file.
   ```powershell
-  ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_Policyinitiative.json -subscriptionId 00000000-0000-0000-0000-000000000000
+  ./deploy-policySetDef.ps1 -definitionFile C:\PolicyInitiatives\CMMC_L3\CMMCL3_PolicyInitiative_Preview.json -subscriptionId 00000000-0000-0000-0000-000000000000
   ```
   **NOTE: The Azure CLI and PowerShell modules refer to a Policy Initiative as a Policy Set.**
   
